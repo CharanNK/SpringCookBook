@@ -9,6 +9,20 @@ public class Ingredient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public Ingredient(){
+
+    }
+
+    public Ingredient(String description,BigDecimal amount,UnitOfMeasure uom){
+        this.description = description;
+        this.amount = amount;
+        this.uom = uom;
+    }
+
+    public Ingredient(Long id) {
+        this.id = id;
+    }
+
     private String description;
     private BigDecimal amount;
 
